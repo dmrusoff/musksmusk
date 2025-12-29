@@ -45,7 +45,7 @@ export const products = [
         tagline: 'Indestructible Geometric Scents',
         price: 179,
         description: 'Inspired by bulletproof exoskeletons. Cold-rolled stainless steel notes with a hint of shattered glass.',
-        image: '/images/cyber.png',
+        image: '/images/cyber_v2.png',
         accent: '#A8A8C0', // Steel
         glow: 'rgba(168, 168, 192, 0.4)'
     },
@@ -55,7 +55,7 @@ export const products = [
         tagline: 'Dig Deeper',
         price: 159,
         description: 'Notes of wet earth, asphalt, and flamethrower fuel. For those who hate traffic and love tunnels.',
-        image: '/images/subterranean.png',
+        image: '/images/subterranean_v2.png',
         accent: '#D99E6A', // Bronze
         glow: 'rgba(217, 158, 106, 0.4)'
     }
