@@ -13,9 +13,9 @@ export default function Hero() {
                     A collection of fragrances inspired by the indomitable <br />
                     human spirit to explore the unknown.
                 </p>
-                <button className={styles.cta}>
+                <a href="#products" className={styles.cta}>
                     Explore Collection
-                </button>
+                </a>
             </div>
             <div className={styles.background}>
                 <div className={styles.planet}></div>
