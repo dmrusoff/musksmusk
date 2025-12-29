@@ -7,7 +7,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding-top: 100px;
+    padding-top: 140px;
+    /* Space below header */
 }
 
 .content {
@@ -16,6 +17,8 @@
     text-align: center;
     max-width: 900px;
     padding: 0 2rem;
+    transform: translateY(-80px);
+    /* Manually centered 'HORIZON' in the planet circles */
     animation: fadeUp 1.5s ease-out forwards;
 }
 
@@ -83,7 +86,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% + 70px));
+    /* Moves planet down to match hero padding */
     width: 60vh;
     height: 60vh;
     border-radius: 50%;

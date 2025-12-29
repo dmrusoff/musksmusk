@@ -6,7 +6,6 @@
     height: 100px;
     background: rgba(11, 12, 21, 0.8);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -33,19 +32,19 @@
     position: relative;
     display: flex;
     align-items: center;
+    width: 320px;
 }
 
-.logoImage {
-    object-fit: contain;
-    filter: brightness(0) invert(1);
-    /* Makes the logo white for the dark theme */
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+.logoSvg {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.brand:hover .logoImage {
-    opacity: 1;
+.brand:hover .logoSvg {
+    filter: drop-shadow(0 0 8px var(--color-accent-soft));
 }
+
 
 .nav {
     display: flex;
@@ -81,8 +80,7 @@
 }
 
 @media (max-width: 768px) {
-    .logoImage {
-        width: 120px;
-        height: auto;
+    .logoWrapper {
+        width: 150px;
     }
 }
