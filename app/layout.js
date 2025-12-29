@@ -9,10 +9,16 @@ export const metadata = {
   description: 'Fragrances for the architects of tomorrow.',
 }
 
+import { CartProvider } from '@/context/CartContext'
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${cinzel.variable} ${lato.variable}`}>{children}</body>
+      <body className={`${cinzel.variable} ${lato.variable}`}>
+        <CartProvider>
+          {children}
+        </CartProvider>
+      </body>
     </html>
   )
 }

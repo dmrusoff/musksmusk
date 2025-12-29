@@ -1,8 +1,11 @@
+'use client';
 import Link from 'next/link';
-
 import styles from './Header.module.css';
+import { useCart } from '@/context/CartContext';
 
 export default function Header() {
+    const { cartCount, setIsCartOpen } = useCart();
+
     return (
         <header className={styles.header}>
             <div className={`container ${styles.container}`}>
@@ -24,8 +27,8 @@ export default function Header() {
                 <nav className={styles.nav}>
                     <Link href="#products" className={styles.link}>Collection</Link>
                     <Link href="#" className={styles.link}>The Mission</Link>
-                    <button className={styles.cartBtn}>
-                        Bag (0)
+                    <button className={styles.cartBtn} onClick={() => setIsCartOpen(true)}>
+                        Bag ({cartCount})
                     </button>
                 </nav>
             </div>
