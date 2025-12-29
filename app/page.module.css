@@ -34,11 +34,12 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  /* Wider cards */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Responsive cards */
   gap: 6rem 4rem;
   /* Specific vertical/horizontal gaps */
 }
+
 
 .footer {
   padding: 8rem 0 4rem;
@@ -95,6 +96,10 @@
 @media (max-width: 768px) {
   .productSection {
     padding: 6rem 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 4rem;
   }
 
   .grid {

@@ -80,7 +80,24 @@
 }
 
 @media (max-width: 768px) {
+    .header {
+        height: 70px;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
     .logoWrapper {
-        width: 150px;
+        width: 140px;
+    }
+
+    .nav {
+        gap: 1.5rem;
+    }
+
+    /* Hide The Mission on small screens to save space */
+    .link:nth-child(2) {
+        display: none;
     }
 }

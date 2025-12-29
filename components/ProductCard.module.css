@@ -119,3 +119,23 @@
     border-color: var(--color-accent);
     color: var(--color-accent);
 }
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.85rem;
+        min-height: auto;
+    }
+
+    .imageContainer {
+        aspect-ratio: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer {
+        gap: 1.5rem;
+    }
+}
