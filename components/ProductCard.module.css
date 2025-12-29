@@ -1,0 +1,121 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.85;
+    /* Portrait orientation for elegance */
+    background: rgba(255, 255, 255, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.image {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+    z-index: 2;
+    transition: transform 0.6s ease;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+}
+
+.card:hover .image {
+    transform: scale(1.08) translateY(-10px);
+}
+
+.halo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Default weak border */
+    opacity: 0.3;
+    transition: all 0.6s ease;
+}
+
+.card:hover .halo {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.details {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.tagline {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-accent);
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.separator {
+    width: 20px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 auto 1.5rem;
+}
+
+.description {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    min-height: 3.4em;
+    /* Keep alignment */
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: auto;
+}
+
+.price {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.btn {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}

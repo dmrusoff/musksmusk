@@ -1,0 +1,102 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    /* Taller, more breathing room */
+    background: rgba(11, 12, 21, 0.8);
+    /* Matches new bg var */
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.logoIcon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoSvg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.logoText {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logoText span:first-child {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    color: #fff;
+}
+
+.logoSubtitle {
+    font-family: var(--font-heading);
+    font-size: 0.6rem;
+    color: var(--color-accent);
+    letter-spacing: 0.5em;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.nav {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.link {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.link:hover {
+    color: var(--color-accent);
+}
+
+.cartBtn {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: #fff;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.3s;
+}
+
+.cartBtn:hover {
+    border-color: var(--color-accent);
+}
