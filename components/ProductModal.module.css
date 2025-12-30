@@ -23,6 +23,7 @@
     border: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
     animation: zoomIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 2rem;
 }
 
 @keyframes zoomIn {
@@ -59,6 +60,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 2rem 0 0 2rem;
+    overflow: hidden;
 }
 
 .image {
@@ -189,22 +192,22 @@
 
 .addBtn {
     padding: 1rem 3.5rem;
-    background: #fff;
-    color: #000;
+    background: transparent;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.3em;
     font-weight: 700;
     font-size: 0.75rem;
-    border: 1px solid #fff;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.5s ease;
     cursor: pointer;
 }
 
 .addBtn:hover {
-    background: transparent;
-    color: #fff;
     border-color: var(--color-accent);
-    box-shadow: 0 0 25px var(--color-accent-soft);
+    color: var(--color-accent);
+    background: rgba(212, 175, 55, 0.05);
 }
 
 

@@ -115,7 +115,7 @@
     }
 
     /* Hide secondary links on mobile to save space */
-    .link:nth-child(2),
+    .link:nth-child(1),
     .link:nth-child(3) {
         display: none;
     }

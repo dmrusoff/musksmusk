@@ -6,10 +6,9 @@
 
 .productSection {
   padding: 10rem 0;
-  /* More breathing room */
   position: relative;
   z-index: 10;
-  /* Seamless fade from the hero background */
+  scroll-margin-top: 100px;
 }
 
 .sectionHeader {
@@ -53,6 +52,7 @@
 .visionSection {
   padding: 10rem 0;
   background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+  scroll-margin-top: 100px;
 }
 
 .visionContent {
@@ -214,6 +214,12 @@
 }
 
 @media (max-width: 768px) {
+
+  .productSection,
+  .visionSection {
+    scroll-margin-top: 70px;
+  }
+
   .landscapeImageSection {
     height: 40vh;
     margin: 6rem 0;

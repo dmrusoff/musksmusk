@@ -67,12 +67,20 @@
 
 .shopBtn {
     margin-top: 2rem;
-    padding: 1rem 2rem;
-    border: 1px solid var(--color-accent);
-    color: var(--color-accent);
+    padding: 1rem 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+
+.shopBtn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: rgba(212, 175, 55, 0.05);
 }
 
 .items {
@@ -95,6 +103,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .itemImage img {
@@ -182,18 +192,20 @@
 .checkoutBtn {
     width: 100%;
     padding: 1.2rem;
-    background: #fff;
-    color: #000;
+    background: transparent;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.3em;
     font-weight: 700;
-    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.5s ease;
 }
 
 .checkoutBtn:hover {
-    background: var(--color-accent);
-    color: #fff;
-    box-shadow: 0 0 30px var(--color-accent-soft);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: rgba(212, 175, 55, 0.05);
 }
 
 @media (max-width: 480px) {

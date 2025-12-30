@@ -16,6 +16,10 @@
   --color-border: rgba(255, 255, 255, 0.1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,7 +36,87 @@ body {
   overflow-x: hidden;
   line-height: 1.8;
   font-weight: 300;
+  position: relative;
+  min-height: 100vh;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  z-index: -1;
+  background: transparent;
+  /* Multiple stars via box-shadow */
+  box-shadow:
+    15vw 10vh #fff,
+    25vw 25vh 1px #fff,
+    40vw 15vh #fff,
+    60vw 35vh 1px #fff,
+    80vw 20vh #fff,
+    10vw 60vh 1px #fff,
+    30vw 80vh #fff,
+    50vw 50vh 1px #fff,
+    70vw 70vh #fff,
+    90vw 40vh 1px #fff,
+    5vw 30vh #fff,
+    20vw 55vh 1px #fff,
+    45vw 85vh #fff,
+    65vw 10vh 1px #fff,
+    85vw 75vh #fff,
+    35vw 40vh 1px #fff,
+    55vw 20vh #fff,
+    75vw 5vh 1px #fff,
+    95vw 90vh #fff,
+    /* Fainter stars */
+    12vw 45vh rgba(255, 255, 255, 0.4),
+    38vw 12vh rgba(255, 255, 255, 0.4),
+    68vw 82vh rgba(255, 255, 255, 0.4),
+    88vw 52vh rgba(255, 255, 255, 0.4),
+    22vw 68vh rgba(255, 255, 255, 0.4);
+  animation: starsTwinkle 5s infinite alternate;
+}
+
+@keyframes starsTwinkle {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow:
+    20vw 15vh #fff,
+    45vw 40vh #fff,
+    75vw 60vh #fff,
+    10vw 85vh #fff,
+    90vw 10vh #fff,
+    /* More stars */
+    33vw 22vh #fff,
+    66vw 77vh #fff,
+    11vw 44vh #fff,
+    88vw 33vh #fff,
+    50vw 95vh #fff;
+  animation: starsTwinkle 3s infinite alternate-reverse;
+}
+
 
 h1,
 h2,
