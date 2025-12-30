@@ -26,34 +26,36 @@ export default function ProductModal({ product, isOpen, onClose }) {
                     </div>
 
                     <div className={styles.infoSection}>
-                        <span className={styles.tagline}>{product.tagline}</span>
-                        <h2 className={styles.name}>{product.name}</h2>
-                        <div className={styles.intensity}>
-                            <span>Intensity</span>
-                            <div className={styles.dots}>
-                                {[...Array(5)].map((_, i) => (
-                                    <div
-                                        key={i}
-                                        className={`${styles.dot} ${i < product.intensity ? styles.active : ''}`}
-                                    ></div>
-                                ))}
+                        <div className={styles.scrollContent}>
+                            <span className={styles.tagline}>{product.tagline}</span>
+                            <h2 className={styles.name}>{product.name}</h2>
+                            <div className={styles.intensity}>
+                                <span>Intensity</span>
+                                <div className={styles.dots}>
+                                    {[...Array(5)].map((_, i) => (
+                                        <div
+                                            key={i}
+                                            className={`${styles.dot} ${i < product.intensity ? styles.active : ''}`}
+                                        ></div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
 
-                        <p className={styles.description}>{product.description}</p>
+                            <p className={styles.description}>{product.description}</p>
 
-                        <div className={styles.notes}>
-                            <div className={styles.noteItem}>
-                                <span className={styles.noteLabel}>Top Notes</span>
-                                <span className={styles.noteValue}>{product.notes.top}</span>
-                            </div>
-                            <div className={styles.noteItem}>
-                                <span className={styles.noteLabel}>Heart Notes</span>
-                                <span className={styles.noteValue}>{product.notes.heart}</span>
-                            </div>
-                            <div className={styles.noteItem}>
-                                <span className={styles.noteLabel}>Base Notes</span>
-                                <span className={styles.noteValue}>{product.notes.base}</span>
+                            <div className={styles.notes}>
+                                <div className={styles.noteItem}>
+                                    <span className={styles.noteLabel}>Top Notes</span>
+                                    <span className={styles.noteValue}>{product.notes.top}</span>
+                                </div>
+                                <div className={styles.noteItem}>
+                                    <span className={styles.noteLabel}>Heart Notes</span>
+                                    <span className={styles.noteValue}>{product.notes.heart}</span>
+                                </div>
+                                <div className={styles.noteItem}>
+                                    <span className={styles.noteLabel}>Base Notes</span>
+                                    <span className={styles.noteValue}>{product.notes.base}</span>
+                                </div>
                             </div>
                         </div>
 

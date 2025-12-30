@@ -80,38 +80,43 @@
 
 .infoSection {
     flex: 1;
-    padding: 5rem 4rem;
+    padding: 1rem 3rem;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    overflow: hidden;
+    height: 100%;
 }
 
-
-
-
+.scrollContent {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 1.5rem;
+    margin-right: -1.5rem;
+}
 
 .tagline {
     font-family: var(--font-body);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.3em;
     color: var(--color-accent);
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
     display: block;
 }
 
 .name {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 0.05em;
 }
 
 .intensity {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-    font-size: 0.8rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-secondary);
@@ -136,20 +141,20 @@
 
 .description {
     font-family: var(--font-body);
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.5;
     color: var(--color-secondary);
-    margin-bottom: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 .notes {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 3rem;
-    margin-bottom: 4rem;
+    padding-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .noteItem {
-    margin-bottom: 2rem;
+    margin-bottom: 0.8rem;
 }
 
 .noteLabel {
@@ -168,12 +173,13 @@
 }
 
 .footer {
-    margin-top: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2rem;
+    padding: 1.5rem 0 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: #0B0C15;
+    z-index: 5;
 }
 
 .price {
@@ -182,20 +188,25 @@
 }
 
 .addBtn {
-    padding: 1.2rem 3rem;
+    padding: 1rem 3.5rem;
     background: #fff;
     color: #000;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
     font-weight: 700;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
+    font-size: 0.75rem;
+    border: 1px solid #fff;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
 }
 
 .addBtn:hover {
-    background: var(--color-accent);
+    background: transparent;
     color: #fff;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 25px var(--color-accent-soft);
 }
+
 
 @media (max-width: 768px) {
     .modal {
@@ -205,13 +216,37 @@
 
     .container {
         flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .imageSection {
+        flex: none;
+        height: 40vh;
     }
 
     .infoSection {
-        padding: 3rem 2rem;
+        padding: 0 2rem;
+        height: auto;
+        overflow: visible;
+    }
+
+    .scrollContent {
+        overflow: visible;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .tagline {
+        margin-top: 2rem;
     }
 
     .name {
         font-size: 2.5rem;
+    }
+
+    .footer {
+        position: sticky;
+        bottom: 0;
+        padding: 2rem 0;
     }
 }
