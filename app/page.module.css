@@ -43,9 +43,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  /* Responsive cards */
   gap: 6rem 4rem;
-  /* Specific vertical/horizontal gaps */
 }
 
 
@@ -61,19 +59,21 @@
   text-align: center;
 }
 
-.visionTag {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
+.sectionTag {
+  display: inline-block;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.4em;
   color: var(--color-accent);
-  display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
 }
 
 .visionTitle {
   font-size: 3.5rem;
+  letter-spacing: 0.15em;
   margin-bottom: 3rem;
+  color: #fff;
 }
 
 .visionText {
@@ -86,61 +86,65 @@
 
 .visionGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   text-align: left;
 }
 
 .visionItem h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
   margin-bottom: 1rem;
+  letter-spacing: 0.1em;
 }
 
 .visionItem p {
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--color-secondary);
+  font-size: 0.95rem;
   line-height: 1.8;
-  opacity: 0.7;
+  color: var(--color-secondary);
 }
 
 .ritualSection {
-  padding: 6rem 0 10rem;
+  padding: 10rem 0;
+  position: relative;
+  scroll-margin-top: 100px;
 }
 
 .ritualGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  margin-top: 6rem;
+  margin-top: 5rem;
 }
 
 .ritualCard {
   background: rgba(255, 255, 255, 0.02);
-  padding: 4rem 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  text-align: center;
+  padding: 3rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.5s ease;
+  border-radius: 2rem;
 }
 
 .ritualCard:hover {
   background: rgba(255, 255, 255, 0.04);
   border-color: var(--color-accent-soft);
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
-.step {
+.ritualNumber {
   font-family: var(--font-heading);
   font-size: 0.8rem;
   color: var(--color-accent);
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   opacity: 0.5;
 }
 
 .ritualCard h3 {
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
   letter-spacing: 0.1em;
 }
 
@@ -149,23 +153,6 @@
   font-size: 0.9rem;
   line-height: 1.8;
   color: var(--color-secondary);
-}
-
-@media (max-width: 768px) {
-  .visionTitle {
-    font-size: 2.5rem;
-  }
-
-  .visionGrid,
-  .ritualGrid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .visionSection,
-  .ritualSection {
-    padding: 5rem 0;
-  }
 }
 
 .landscapeImageSection {
@@ -185,13 +172,11 @@
   left: 0;
   width: 100%;
   height: 120%;
-  /* For parallax effect */
   background:
     linear-gradient(rgba(11, 12, 21, 0.4), rgba(11, 12, 21, 0.4)),
     radial-gradient(circle at 30% 50%, rgba(76, 29, 149, 0.2) 0%, transparent 60%),
     radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
     url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat;
-  /* Using a high-quality NASA-style Earth/Space shot from a public URL as a temporary fallback which is highly reliable */
   background-attachment: fixed;
   z-index: 1;
 }
@@ -213,26 +198,6 @@
   animation: fadeUp 2s ease-out;
 }
 
-@media (max-width: 768px) {
-
-  .productSection,
-  .visionSection {
-    scroll-margin-top: 70px;
-  }
-
-  .landscapeImageSection {
-    height: 40vh;
-    margin: 6rem 0;
-  }
-
-  .landscapeText {
-    font-size: 2rem;
-    letter-spacing: 0.1em;
-  }
-}
-
-
-
 .footer {
   padding: 8rem 0 4rem;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
@@ -246,7 +211,6 @@
   margin-bottom: 6rem;
   align-items: flex-start;
 }
-
 
 .footerBrand h3 {
   font-size: 1.5rem;
@@ -283,25 +247,69 @@
   margin-top: 0.8rem;
   font-style: italic;
   font-family: var(--font-heading);
-  /* Serif feel */
 }
 
 @media (max-width: 768px) {
   .productSection {
     padding: 6rem 0;
+    scroll-margin-top: 70px;
+  }
+
+  .grid {
+    gap: 3rem 2rem;
   }
 
   .sectionHeader {
     margin-bottom: 4rem;
   }
 
-  .grid {
-    gap: 4rem;
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .visionSection {
+    padding: 6rem 0;
+    scroll-margin-top: 70px;
+  }
+
+  .visionTitle {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .visionText {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .visionGrid,
+  .ritualGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .ritualSection {
+    padding: 6rem 0;
+    scroll-margin-top: 70px;
+  }
+
+  .ritualCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .landscapeImageSection {
+    height: 40vh;
+    margin: 4rem 0;
+  }
+
+  .landscapeText {
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
   }
 
   .footerContent {
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
     text-align: center;
     align-items: center;
   }

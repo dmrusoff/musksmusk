@@ -158,17 +158,43 @@
         font-size: 1.5rem;
     }
 
-    .description {
-        font-size: 0.85rem;
-        min-height: auto;
+    .tagline {
+        font-size: 0.7rem;
+        margin-bottom: 1rem;
     }
 
     .imageContainer {
         aspect-ratio: 1;
         margin-bottom: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    /* Make overlay slightly visible on touch devices since hover doesn't exist */
+    .overlay {
+        opacity: 1;
+        background: linear-gradient(to top, rgba(11, 12, 21, 0.8) 0%, transparent 60%);
+        align-items: flex-end;
+        padding-bottom: 2rem;
+        backdrop-filter: none;
+        /* Reduce blur for better performance on mobile */
+    }
+
+    .discover {
+        transform: translateY(0);
+        font-size: 0.65rem;
+        padding: 0.6rem 1.4rem;
+        border-color: rgba(255, 255, 255, 0.6);
     }
 
     .footer {
         gap: 1.5rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
     }
 }

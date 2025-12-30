@@ -15,7 +15,7 @@ export default function Home() {
       <section id="products" className={styles.productSection}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>The <span className="gradient-text">Collection</span></h2>
+            <h2 className={styles.sectionTitle}><span className="gradient-text">Collection</span></h2>
             <p className={styles.sectionSubtitle}>Precise. Powerful. Personal.</p>
             <div className={styles.separator}></div>
           </div>
@@ -30,9 +30,12 @@ export default function Home() {
 
       <section id="vision" className={styles.visionSection}>
         <div className="container">
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}><span className="gradient-text">Vision</span></h2>
+            <p className={styles.sectionSubtitle}>Born for the Stars.</p>
+            <div className={styles.separator}></div>
+          </div>
           <div className={styles.visionContent}>
-            <span className={styles.visionTag}>The Vision</span>
-            <h2 className={styles.visionTitle}>Born for the <span className="gradient-text">Stars</span></h2>
             <p className={styles.visionText}>
               Every scent in our collection is a tribute to the human legacy of exploration.
               From the iron-rich dust of Mars to the cold vacuum of the outer rim,
@@ -61,11 +64,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.ritualSection}>
+      <section id="ritual" className={styles.ritualSection}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>The <span className="gradient-text">Ritual</span></h2>
+            <h2 className={styles.sectionTitle}><span className="gradient-text">Ritual</span></h2>
             <p className={styles.sectionSubtitle}>Enhance your presence.</p>
+            <div className={styles.separator}></div>
           </div>
           <div className={styles.ritualGrid}>
             <div className={styles.ritualCard}>
@@ -107,6 +111,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+    </main >
   );
 }
