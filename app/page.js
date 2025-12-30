@@ -30,6 +30,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={styles.moonSection}>
+        <div className={styles.moonParallaxBg}></div>
+        <div className={styles.landscapeOverlay}>
+          <div className="container">
+            <h2 className={styles.landscapeText}>LUNAR PERSPECTIVE</h2>
+          </div>
+        </div>
+      </section>
+
       <section id="vision" className={styles.visionSection}>
         <div className="container">
           <div className={styles.sectionHeader}>

@@ -181,6 +181,29 @@
   z-index: 1;
 }
 
+.moonSection {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.moonParallaxBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: url('/images/moon_surface.png') center/cover no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+  filter: brightness(0.8) contrast(1.1);
+}
+
 .landscapeOverlay {
   position: relative;
   z-index: 2;
@@ -298,6 +321,11 @@
   }
 
   .landscapeImageSection {
+    height: 40vh;
+    margin: 4rem 0;
+  }
+
+  .moonSection {
     height: 40vh;
     margin: 4rem 0;
   }
