@@ -1,15 +1,29 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Header.module.css';
 import { useCart } from '@/context/CartContext';
 
 export default function Header() {
     const { cartCount, setIsCartOpen } = useCart();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Prevent scroll when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isMenuOpen]);
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
 
     return (
         <header className={styles.header}>
             <div className={`container ${styles.container}`}>
-                <Link href="/" className={styles.brand}>
+                <Link href="/" className={styles.brand} onClick={closeMenu}>
                     <div className={styles.logoWrapper}>
                         <svg viewBox="0 0 320 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.logoSvg}>
                             {/* Abstract Orbit Icon */}
@@ -24,13 +38,21 @@ export default function Header() {
                         </svg>
                     </div>
                 </Link>
-                <nav className={styles.nav}>
-                    <Link href="#" className={styles.link}>Mission</Link>
-                    <Link href="#products" className={styles.link}>Collection</Link>
-                    <Link href="#vision" className={styles.link}>Vision</Link>
-                    <Link href="#ritual" className={styles.link}>Ritual</Link>
+
+                {/* Hamburger Toggle */}
+                <button className={`${styles.menuToggle} ${isMenuOpen ? styles.menuActive : ''}`} onClick={toggleMenu} aria-label="Toggle Menu">
+                    <span className={styles.hamburgerLine}></span>
+                    <span className={styles.hamburgerLine}></span>
+                </button>
+
+                <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
+                    <Link href="#" className={styles.link} onClick={closeMenu}>Mission</Link>
+                    <Link href="#products" className={styles.link} onClick={closeMenu}>Collection</Link>
+                    <Link href="#vision" className={styles.link} onClick={closeMenu}>Vision</Link>
+                    <Link href="#ritual" className={styles.link} onClick={closeMenu}>Ritual</Link>
                 </nav>
-                <button className={styles.cartBtn} onClick={() => setIsCartOpen(true)}>
+
+                <button className={styles.cartBtn} onClick={() => { setIsCartOpen(true); closeMenu(); }}>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.bagIcon}>
                         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
                         <line x1="3" y1="6" x2="21" y2="6"></line>

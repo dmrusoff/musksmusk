@@ -5,7 +5,7 @@ export const products = [
         tagline: 'High Energy Essence',
         price: 199,
         description: 'A shocking fragrance that electrifies the senses. Notes of ozone, citrus, and static amber.',
-        image: '/images/voltage.png',
+        image: '/images/voltage_v2.png',
         accent: '#5FD3D9', // Soft Cyan
         glow: 'rgba(95, 211, 217, 0.4)',
         intensity: 4,

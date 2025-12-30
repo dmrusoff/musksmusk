@@ -71,7 +71,7 @@
     letter-spacing: 0.25em;
     font-weight: 400;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
+    border-radius: 0.5rem;
     transition: all 0.5s ease;
 }
 
@@ -116,10 +116,10 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 100px;
+        padding-top: 160px;
         height: auto;
-        min-height: 80vh;
-        padding-bottom: 4rem;
+        min-height: 100vh;
+        padding-bottom: 6rem;
     }
 
     .content {
