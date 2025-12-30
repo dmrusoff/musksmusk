@@ -20,14 +20,23 @@
 .sectionTitle {
   font-size: 2.5rem;
   letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   color: #fff;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--color-secondary);
+  opacity: 0.6;
+  margin-bottom: 2rem;
 }
 
 .separator {
   width: 1px;
-  height: 60px;
-  /* Vertical elegant line */
+  height: 80px;
   background: linear-gradient(to bottom, var(--color-accent), transparent);
   margin: 0 auto;
 }
@@ -39,6 +48,183 @@
   gap: 6rem 4rem;
   /* Specific vertical/horizontal gaps */
 }
+
+
+.visionSection {
+  padding: 10rem 0;
+  background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+}
+
+.visionContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.visionTag {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.visionTitle {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+
+.visionText {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--color-secondary);
+  margin-bottom: 6rem;
+}
+
+.visionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  text-align: left;
+}
+
+.visionItem h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.visionItem p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+.ritualSection {
+  padding: 6rem 0 10rem;
+}
+
+.ritualGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 6rem;
+}
+
+.ritualCard {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 4rem 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.ritualCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--color-accent-soft);
+  transform: translateY(-10px);
+}
+
+.step {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 2rem;
+  opacity: 0.5;
+}
+
+.ritualCard h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.ritualCard p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .visionTitle {
+    font-size: 2.5rem;
+  }
+
+  .visionGrid,
+  .ritualGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .visionSection,
+  .ritualSection {
+    padding: 5rem 0;
+  }
+}
+
+.landscapeImageSection {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem 0;
+}
+
+.parallaxBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  /* For parallax effect */
+  background:
+    linear-gradient(rgba(11, 12, 21, 0.4), rgba(11, 12, 21, 0.4)),
+    radial-gradient(circle at 30% 50%, rgba(76, 29, 149, 0.2) 0%, transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat;
+  /* Using a high-quality NASA-style Earth/Space shot from a public URL as a temporary fallback which is highly reliable */
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.landscapeOverlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.landscapeText {
+  font-size: 4rem;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeUp 2s ease-out;
+}
+
+@media (max-width: 768px) {
+  .landscapeImageSection {
+    height: 40vh;
+    margin: 6rem 0;
+  }
+
+  .landscapeText {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+}
+
 
 
 .footer {
@@ -54,6 +240,7 @@
   margin-bottom: 6rem;
   align-items: flex-start;
 }
+
 
 .footerBrand h3 {
   font-size: 1.5rem;

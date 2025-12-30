@@ -2,15 +2,14 @@
     display: flex;
     flex-direction: column;
     background: transparent;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
 }
 
 .imageContainer {
     position: relative;
     width: 100%;
     aspect-ratio: 0.85;
-    /* Portrait orientation for elegance */
     background: rgba(255, 255, 255, 0.02);
     display: flex;
     align-items: center;
@@ -18,6 +17,42 @@
     margin-bottom: 2rem;
     overflow: hidden;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 12, 21, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 5;
+    backdrop-filter: blur(5px);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.discover {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 1rem 2rem;
+    transform: translateY(10px);
+    transition: transform 0.5s ease;
+}
+
+.card:hover .discover {
+    transform: translateY(0);
+}
+
 
 .image {
     max-width: 60%;
@@ -81,15 +116,7 @@
     margin: 0 auto 1.5rem;
 }
 
-.description {
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    color: var(--color-secondary);
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    min-height: 3.4em;
-    /* Keep alignment */
-}
+
 
 .footer {
     display: flex;

@@ -67,17 +67,35 @@
 }
 
 .cartBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     font-family: var(--font-body);
     font-size: 0.85rem;
     color: #fff;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 2px;
-    transition: border-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.bagIcon {
+    opacity: 0.8;
+}
+
+.cartCount {
+    color: var(--color-accent);
+    font-family: var(--font-heading);
 }
 
 .cartBtn:hover {
-    border-color: var(--color-accent);
+    color: var(--color-accent);
 }
+
+.cartBtn:hover .bagIcon {
+    opacity: 1;
+}
+
 
 @media (max-width: 768px) {
     .header {
@@ -96,8 +114,9 @@
         gap: 1.5rem;
     }
 
-    /* Hide The Mission on small screens to save space */
-    .link:nth-child(2) {
+    /* Hide secondary links on mobile to save space */
+    .link:nth-child(2),
+    .link:nth-child(3) {
         display: none;
     }
 }
