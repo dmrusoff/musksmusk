@@ -366,5 +366,7 @@
     background-attachment: scroll;
     height: 100%;
     /* Reset height to match container */
+    background-size: cover;
+    background-position: center;
   }
 }
