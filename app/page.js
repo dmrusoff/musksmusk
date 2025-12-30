@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ProductCard from '@/components/ProductCard';
 import CartDrawer from '@/components/CartDrawer';
+import ScrollToTop from '@/components/ScrollToTop';
 import styles from './page.module.css';
 import { products } from '@/data/products';
 
@@ -10,6 +11,7 @@ export default function Home() {
     <main className={styles.main}>
       <Header />
       <CartDrawer />
+      <ScrollToTop />
       <Hero />
 
       <section id="products" className={styles.productSection}>

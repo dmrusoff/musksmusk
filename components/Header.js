@@ -19,8 +19,8 @@ export default function Header() {
                             <circle cx="40" cy="30" r="2" fill="#fff" />
 
                             {/* Premium Typography */}
-                            <text x="65" y="38" fill="#fff" style={{ font: '300 28px var(--font-heading)', letterSpacing: '0.25em', textTransform: 'uppercase' }}>MUSKS</text>
-                            <text x="185" y="38" fill="var(--color-accent)" style={{ font: '300 28px var(--font-heading)', letterSpacing: '0.25em', textTransform: 'uppercase' }}>MUSK</text>
+                            <text x="65" y="38" className={styles.logoText} fill="#fff" style={{ font: '300 28px var(--font-heading)', letterSpacing: '0.25em', textTransform: 'uppercase' }}>MUSKS</text>
+                            <text x="185" y="38" className={styles.logoText} fill="var(--color-accent)" style={{ font: '300 28px var(--font-heading)', letterSpacing: '0.25em', textTransform: 'uppercase' }}>MUSK</text>
                         </svg>
                     </div>
                 </Link>
@@ -29,16 +29,16 @@ export default function Header() {
                     <Link href="#products" className={styles.link}>Collection</Link>
                     <Link href="#vision" className={styles.link}>Vision</Link>
                     <Link href="#ritual" className={styles.link}>Ritual</Link>
-                    <button className={styles.cartBtn} onClick={() => setIsCartOpen(true)}>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.bagIcon}>
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 0 1-8 0"></path>
-                        </svg>
-                        <span className={styles.cartText}>Bag</span>
-                        <span className={styles.cartCount}>[{cartCount}]</span>
-                    </button>
                 </nav>
+                <button className={styles.cartBtn} onClick={() => setIsCartOpen(true)}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={styles.bagIcon}>
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span className={styles.cartText}>Bag</span>
+                    <span className={styles.cartCount}>[{cartCount}]</span>
+                </button>
             </div>
         </header>
     );
