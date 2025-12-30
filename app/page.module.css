@@ -157,7 +157,7 @@
 
 .landscapeImageSection {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -183,7 +183,7 @@
 
 .moonSection {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -321,12 +321,12 @@
   }
 
   .landscapeImageSection {
-    height: 40vh;
+    height: 30vh;
     margin: 4rem 0;
   }
 
   .moonSection {
-    height: 40vh;
+    height: 30vh;
     margin: 4rem 0;
   }
 
