@@ -370,3 +370,14 @@
     background-position: center;
   }
 }
+
+/* Fix for low-res parallax on tablets (iPad) */
+@media (max-width: 1024px) {
+
+  .parallaxBg,
+  .moonParallaxBg {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+}
